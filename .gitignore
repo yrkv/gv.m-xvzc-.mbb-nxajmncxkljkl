@@ -1,0 +1,6 @@
+/build
+/.idea
+/.grade
+/app/build
+/app/app.iml
+*.iml
