@@ -25,7 +25,8 @@
         android:layout_below="@+id/title"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="49dp"
-        android:text="My Shopping List" />
+        android:text="My Shopping List"
+        android:onClick="goToShoppingList"/>
 
     <Button
         android:id="@+id/recipes"
@@ -34,5 +35,6 @@
         android:layout_below="@+id/shoppingList"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:text="Recipes" />
+        android:text="Recipes"
+        android:onClick="goToRecipes"/>
 </RelativeLayout>
