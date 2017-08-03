@@ -14,7 +14,8 @@ import java.util.ArrayList;
 
 public class ShoppingList extends AppCompatActivity {
 
-    ArrayList<CheckBox> list = new ArrayList<CheckBox>();
+    ArrayList<CheckBox> listBoxes = new ArrayList<CheckBox>(); //sets up 2 parallel arraylists for boxes and texts
+    ArrayList<EditText> listTexts = new ArrayList<EditText>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,5 +59,8 @@ public class ShoppingList extends AppCompatActivity {
         projectsList.addView(text);
 
         // add the edittext to list
+
+        listBoxes.add(box);
+        listTexts.add(text);
     }
 }
