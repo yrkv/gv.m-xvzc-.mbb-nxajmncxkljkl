@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -24,12 +25,6 @@ public class ShoppingList extends AppCompatActivity {
     }
 
     public void addItem(View view) {
-       // setContentView(R.layout.activity_projects);
-
-       // EditText editText = (EditText) findViewById(R.id.editTextNameProject);
-
-       // String name = editText.getText().toString();
-
         LinearLayout projectsList = (LinearLayout) findViewById(R.id.itemList);
 
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams( LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT );
@@ -58,8 +53,44 @@ public class ShoppingList extends AppCompatActivity {
         projectsList.addView(box);
         projectsList.addView(text);
 
-        // add the edittext to list
+        // add the boxes and texts to their respective arraylists
+        listBoxes.add(box);
+        listTexts.add(text);
+    }
 
+    public void recipeAddItem(View view, String name) {
+        LinearLayout projectsList = (LinearLayout) findViewById(R.id.itemList);
+
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams( LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT );
+
+        CheckBox box = new CheckBox(this);
+
+        EditText text = new EditText(this);
+
+        EditText editText = (EditText)findViewById(R.id.text);
+        editText.setText(name, TextView.BufferType.EDITABLE);
+
+        /*
+        set attributes here
+         */
+        Resources r = getResources();
+
+        int px = (int) TypedValue.applyDimension(
+                TypedValue.COMPLEX_UNIT_DIP,
+                20,
+                r.getDisplayMetrics()
+        );
+
+        params.setMargins(0, 0, 0, px);
+
+        box.setLayoutParams(params);
+
+        text.setLayoutParams(params);
+
+        projectsList.addView(box);
+        projectsList.addView(text);
+
+        // add the boxes and texts to their respective arraylists
         listBoxes.add(box);
         listTexts.add(text);
     }
