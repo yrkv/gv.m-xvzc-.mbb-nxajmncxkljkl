@@ -60,43 +60,13 @@ public class ShoppingList extends AppCompatActivity {
         listTexts.add(text);
     }
 
-    public void recipeAddItem(View view, String name) {
-        LinearLayout projectsList = (LinearLayout) findViewById(R.id.itemList);
-
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams( LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT );
-
-        CheckBox box = new CheckBox(this);
-
-        EditText text = new EditText(this);
+    public void recipeAddItem(String name) {
+        addItem();
 
         EditText editText = (EditText)findViewById(R.id.text);
         editText.setText(name, TextView.BufferType.EDITABLE);
 
-        /*
-        set attributes here
-         */
-        Resources r = getResources();
-
-        int px = (int) TypedValue.applyDimension(
-                TypedValue.COMPLEX_UNIT_DIP,
-                20,
-                r.getDisplayMetrics()
-        );
-
-        params.setMargins(0, 0, 0, px);
-
-        box.setLayoutParams(params);
-
-        text.setLayoutParams(params);
-
-        projectsList.addView(box);
-        projectsList.addView(text);
-
-        // add the boxes and texts to their respective arraylists
-        listBoxes.add(box);
-        listTexts.add(text);
-
-        CheckBox satView = (CheckBox)findViewById(R.id.box);
+        CheckBox satView = (CheckBox) box;
 
         satView.OnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
@@ -107,9 +77,4 @@ public class ShoppingList extends AppCompatActivity {
         }
         );
     }
-
-    // need to make a checkbox listener for each checkbox that is created
-    // i could maybe add the listener right after checkbox is made
-
-
 }
