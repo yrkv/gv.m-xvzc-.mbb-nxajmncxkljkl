@@ -26,7 +26,11 @@ public class ShoppingList extends AppCompatActivity {
         setContentView(R.layout.activity_shopping_list);
     }
 
-    public void addItem(View view) {
+    public void addItem(View v) {
+        addItem();
+    }
+
+    public void addItem() {
         LinearLayout projectsList = (LinearLayout) findViewById(R.id.itemList);
 
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams( LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT );
@@ -58,6 +62,15 @@ public class ShoppingList extends AppCompatActivity {
         // add the boxes and texts to their respective arraylists
         listBoxes.add(box);
         listTexts.add(text);
+
+        CheckBox satView = new CheckBox(this);
+
+        satView.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView,boolean isChecked) {
+                //what happens when checkbox is checked.
+            }
+        });
     }
 
     public void recipeAddItem(String name) {
@@ -65,16 +78,5 @@ public class ShoppingList extends AppCompatActivity {
 
         EditText editText = (EditText)findViewById(R.id.text);
         editText.setText(name, TextView.BufferType.EDITABLE);
-
-        CheckBox satView = (CheckBox) box;
-
-        satView.OnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-
-        @Override
-        public void onCheckedChanged(CompoundButton buttonView,boolean isChecked) {
-
-               }
-        }
-        );
     }
 }
