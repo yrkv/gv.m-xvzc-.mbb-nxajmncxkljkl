@@ -42,10 +42,9 @@
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="115dp"
         android:id="@+id/scrollView2"
-        android:layout_below="@+id/buttonAddItem"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="38dp">
+        android:layout_alignParentEnd="true">
 
         <LinearLayout
             android:id="@+id/itemList"
