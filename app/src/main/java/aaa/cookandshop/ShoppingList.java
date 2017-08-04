@@ -7,9 +7,11 @@ import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 
 import java.util.ArrayList;
 
@@ -93,5 +95,21 @@ public class ShoppingList extends AppCompatActivity {
         // add the boxes and texts to their respective arraylists
         listBoxes.add(box);
         listTexts.add(text);
+
+        CheckBox satView = (CheckBox)findViewById(R.id.box);
+
+        satView.OnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+        @Override
+        public void onCheckedChanged(CompoundButton buttonView,boolean isChecked) {
+
+               }
+        }
+        );
     }
+
+    // need to make a checkbox listener for each checkbox that is created
+    // i could maybe add the listener right after checkbox is made
+
+
 }
