@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="false"
-    tools:context="aaa.cookandshop.Recipes">
+    tools:context="aaa.cookandshop.Recipes"
+    android:background="@drawable/image2">
 
     <Button
         android:id="@+id/button3"
