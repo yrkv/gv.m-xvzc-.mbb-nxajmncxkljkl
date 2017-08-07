@@ -39,6 +39,8 @@ public class ShoppingList extends AppCompatActivity {
 
         EditText text = new EditText(this);
 
+        getLayoutInflater().inflate(R.layout.shopping_list_item, projectsList, true);
+
         /*
         set attributes here
          */
@@ -56,8 +58,8 @@ public class ShoppingList extends AppCompatActivity {
 
         text.setLayoutParams(params);
 
-        projectsList.addView(box);
-        projectsList.addView(text);
+//        projectsList.addView(box);
+//        projectsList.addView(text);
 
         // add the boxes and texts to their respective arraylists
         listBoxes.add(box);
