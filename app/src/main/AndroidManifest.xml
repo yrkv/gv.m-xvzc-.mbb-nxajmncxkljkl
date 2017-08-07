@@ -18,10 +18,6 @@
         </activity>
         <activity android:name=".ShoppingList" />
         <activity android:name=".Recipes" />
-        <activity android:name=".Sides" />
-        <activity android:name=".Desserts" />
-        <activity android:name=".Main_Dishes" />
-        <activity android:name=".Starters"></activity>
     </application>
 
 </manifest>
