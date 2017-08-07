@@ -8,6 +8,13 @@
     tools:context="aaa.cookandshop.Home"
     android:background="@drawable/chef">
 
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/settings"/>
+
     <TextView
         android:id="@+id/title"
         android:layout_width="300dp"
