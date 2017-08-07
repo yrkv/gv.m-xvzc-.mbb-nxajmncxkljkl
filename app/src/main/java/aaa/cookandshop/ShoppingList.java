@@ -1,23 +1,27 @@
 package aaa.cookandshop;
 
-import android.content.res.Resources;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
-import android.util.TypedValue;
+import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.ArraySet;
+import android.view.KeyEvent;
 import android.view.View;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.CompoundButton.OnCheckedChangeListener;
 
 import java.util.ArrayList;
 
 public class ShoppingList extends AppCompatActivity {
+
+    // TODO: find some way to store this shit
+    private ArrayList<String> list = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,15 +38,35 @@ public class ShoppingList extends AppCompatActivity {
         LinearLayout projectsList = (LinearLayout) findViewById(R.id.itemList);
 
         // make a copy of the button
-        View button = getLayoutInflater().inflate(R.layout.shopping_list_item, projectsList, false);
+        final View button = getLayoutInflater().inflate(R.layout.shopping_list_item, projectsList, false);
 
         // set the text
         ((EditText)button.findViewById(R.id.itemText)).setText(text);
 
-        // add it to the list
+        button.setId(list.size());
+
+        // add it to the Layout
         projectsList.addView(button);
 
-        // TODO: add it to a list of items
+        // add it to a list
+        list.add(text);
+
+        ((EditText)button.findViewById(R.id.itemText)).addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                list.set(button.getId(), s.toString());
+            }
+        });
 
         ((CheckBox)button.findViewById(R.id.checkBox))
                 .setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
