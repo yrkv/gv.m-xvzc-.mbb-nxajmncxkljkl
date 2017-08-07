@@ -11,6 +11,7 @@
     android:layout_height="50dp">
 
     <EditText
+        android:id="@+id/itemText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""

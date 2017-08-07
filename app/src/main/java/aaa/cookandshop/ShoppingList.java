@@ -10,6 +10,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 
@@ -39,7 +40,11 @@ public class ShoppingList extends AppCompatActivity {
 
         EditText text = new EditText(this);
 
-        getLayoutInflater().inflate(R.layout.shopping_list_item, projectsList, true);
+        RelativeLayout button = (RelativeLayout) getLayoutInflater().inflate(R.layout.shopping_list_item, null);
+
+        ((EditText)button.findViewById(R.id.itemText)).setText("aaa");
+
+        projectsList.addView(button);
 
         /*
         set attributes here

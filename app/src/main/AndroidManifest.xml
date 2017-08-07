@@ -16,7 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:theme="@style/AppTheme2" android:name=".ShoppingList" />
+        <activity android:theme="@style/AppTheme2" android:name=".ShoppingList" android:windowSoftInputMode="adjustPan|adjustResize"/>
         <activity android:name=".Recipes" />
     </application>
 
