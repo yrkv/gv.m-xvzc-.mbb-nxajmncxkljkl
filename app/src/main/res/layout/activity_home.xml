@@ -5,13 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="false"
-    tools:context="aaa.cookandshop.Home">
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/image1"
-        />
+    tools:context="aaa.cookandshop.Home"
+    android:background="@drawable/chef">
 
     <TextView
         android:id="@+id/title"
