@@ -40,11 +40,12 @@ public class ShoppingList extends AppCompatActivity {
 
         EditText text = new EditText(this);
 
-        RelativeLayout button = (RelativeLayout) getLayoutInflater().inflate(R.layout.shopping_list_item, null);
+        View button = getLayoutInflater().inflate(R.layout.shopping_list_item, projectsList, false);
 
         ((EditText)button.findViewById(R.id.itemText)).setText("aaa");
 
         projectsList.addView(button);
+
 
         /*
         set attributes here
