@@ -24,6 +24,7 @@ public class Home extends AppCompatActivity {
 
         Intent intent2 = new Intent(this, Recipes.class);
 
+
         startActivity(intent2);
     }
 }
