@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Cook\'N\'Shop</string>
+    <string-array name="recipe0">
+        <item>Brownie Mallow Bars</item>
+        <item>Prepare brownie mix according to directions on package. Bake in 9x13 pan at 350 degrees for 28-30 min. Top with marshmallows and bake 3 minutes longer (marshmallows will not be completely melted).    FROSTING: Combine chips, peanut butter, and butter in sauce pan and cook until melted. Take off stove and add cereal. Spread over marshmallows. Cool 2 hours.	</item>
+        <item>1,pkg fudge brownie mix</item>
+        <item>1,pkg miniature marshmallows (10 1/2 oz)</item>
+        <item>2,cups semi-sweet chocolate chips (12 oz)</item>
+        <item>1,cup peanut butter</item>
+        <item >1,Tbsp butter or margarine</item>
+        <item>1.5,cups crisp rice cereal</item>
+    </string-array>
 </resources>
