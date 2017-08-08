@@ -16,8 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:theme="@style/AppTheme2" android:name=".ShoppingList" android:windowSoftInputMode="adjustPan|adjustResize"/>
+        <activity
+            android:name=".ShoppingList"
+            android:theme="@style/AppTheme2"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
         <activity android:name=".Recipes" />
+        <activity android:name=".ViewRecipes"
+            android:theme="@style/AppTheme2"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
     </application>
 
 </manifest>

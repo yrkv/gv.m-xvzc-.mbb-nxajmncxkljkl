@@ -15,27 +15,26 @@ public class Recipes extends AppCompatActivity {
 
     }
     public void goToStarters(View view) {
-
-        Intent intent = new Intent(this, Recipes.class);
-
+        Intent intent = new Intent(this, ViewRecipes.class);
+        intent.setAction("Recipes/Starters");
         startActivity(intent);
     }
     public void goToMain_dishes(View view) {
 
-        Intent intent = new Intent(this, Recipes.class);
-
+        Intent intent = new Intent(this, ViewRecipes.class);
+        intent.setAction("Recipes/Main Dishes");
         startActivity(intent);
     }
     public void goToSides(View view) {
 
-        Intent intent = new Intent(this, Recipes.class);
-
+        Intent intent = new Intent(this, ViewRecipes.class);
+        intent.setAction("Recipes/Sides");
         startActivity(intent);
     }
     public void goToDesserts(View view) {
 
-        Intent intent = new Intent(this, Recipes.class);
-
+        Intent intent = new Intent(this, ViewRecipes.class);
+        intent.setAction("Recipes/Desserts");
         startActivity(intent);
     }
 
