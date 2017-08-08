@@ -55,10 +55,12 @@ public class ShoppingList extends AppCompatActivity {
         SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
         String data = sharedPref.getString(getString(R.string.listData), "");
 
-        ArrayList<String> newList = SavingThing.toArrayList(data);
+        if (data.equals("")) {
+            ArrayList<String> newList = SavingThing.toArrayList(data);
 
-        for (String text : newList) {
-            addItem(text);
+            for (String text : newList) {
+                addItem(text);
+            }
         }
     }
 

@@ -11,12 +11,13 @@ public class SavingThing {
     public static String toString(ArrayList<String> list) {
         String out = "";
 
-        if (list.size() > 0)
-            for (int i = 0; i < list.size() - 1; i++) {
-                out += list.get(i) + "\n";
-            }
+        for (int i = 0; i < list.size() - 1; i++) {
+            out += list.get(i) + "\n";
+        }
 
-        out += list.get(list.size() - 1);
+        if (list.size() > 0) {
+            out += list.get(list.size() - 1);
+        }
 
         return out;
     }

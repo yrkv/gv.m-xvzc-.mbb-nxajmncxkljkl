@@ -23,6 +23,9 @@
         <activity android:name=".ViewRecipes"
             android:theme="@style/AppTheme2"
             android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity android:name=".ViewRecipeDetails"
+            android:theme="@style/AppTheme2"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
     </application>
 
 </manifest>
