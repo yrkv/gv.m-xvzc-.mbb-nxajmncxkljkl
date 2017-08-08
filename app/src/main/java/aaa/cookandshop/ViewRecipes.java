@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -49,20 +50,22 @@ public class ViewRecipes extends AppCompatActivity {
                     if (!categoryButtons.contains(tags[j])) {
                         categoryButtons.add(tags[j]);
                         addButton(action, tags[j]);
+                        break;
                     }
                 }
             }
 
-            for (int j = 0; j <= tags.length; j++) {
-                if (j < tags.length && j < currentDir.length) {
+            boolean showButton = tags.length >= currentDir.length;
+            if (showButton) {
+                for (int j = 0; j < currentDir.length; j++) {
                     if (!currentDir[j].equals(tags[j])) {
+                        showButton = false;
                         break;
                     }
-                } else {
-                    addRecipeButton(i);
-                    break;
                 }
             }
+            if (showButton)
+                addRecipeButton(i);
         }
 
 
