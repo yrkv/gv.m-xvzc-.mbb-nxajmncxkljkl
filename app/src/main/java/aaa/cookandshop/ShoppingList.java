@@ -20,7 +20,7 @@ import java.util.ArrayList;
 
 public class ShoppingList extends AppCompatActivity {
 
-    // TODO: find some way to store this shit
+    // TODO: find some way to save this shit
     private ArrayList<String> list = new ArrayList<>();
 
     @Override
@@ -33,6 +33,13 @@ public class ShoppingList extends AppCompatActivity {
         addItem("");
     }
 
+    public void removeItem(View v) {
+        System.out.println(v.getId());
+        LinearLayout projectsList = (LinearLayout) findViewById(R.id.itemList);
+        projectsList.removeView(v);
+        list.remove(0);
+    }
+
     public void addItem(String text) {
         // get the LinearLayout
         LinearLayout projectsList = (LinearLayout) findViewById(R.id.itemList);
@@ -43,6 +50,7 @@ public class ShoppingList extends AppCompatActivity {
         // set the text
         ((EditText)button.findViewById(R.id.itemText)).setText(text);
 
+        System.out.println(list.size());
         button.setId(list.size());
 
         // add it to the Layout
@@ -68,12 +76,13 @@ public class ShoppingList extends AppCompatActivity {
             }
         });
 
-        ((CheckBox)button.findViewById(R.id.checkBox))
-                .setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView,boolean isChecked) {
-                //what happens when checkbox is checked.
-            }
-        });
+//        ((CheckBox)button.findViewById(R.id.checkBox))
+//                .setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(CompoundButton buttonView,boolean isChecked) {
+//                removeItem();
+//                what happens when checkbox is checked.
+//            }
+//        });
     }
 }
