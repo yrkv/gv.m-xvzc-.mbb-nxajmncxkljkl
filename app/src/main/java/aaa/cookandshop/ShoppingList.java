@@ -34,6 +34,32 @@ public class ShoppingList extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shopping_list);
+        load();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        save();
+    }
+
+    private void save() {
+        SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+
+        editor.putString(getString(R.string.listData), SavingThing.toString(list));
+        editor.apply();
+    }
+
+    private void load() {
+        SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+        String data = sharedPref.getString(getString(R.string.listData), "");
+
+        ArrayList<String> newList = SavingThing.toArrayList(data);
+
+        for (String text : newList) {
+            addItem(text);
+        }
     }
 
     public void addItem(View v) {
