@@ -50,8 +50,8 @@ public class ViewRecipes extends AppCompatActivity {
                     if (!categoryButtons.contains(tags[j])) {
                         categoryButtons.add(tags[j]);
                         addButton(action, tags[j]);
-                        break;
                     }
+                    break;
                 }
             }
 
