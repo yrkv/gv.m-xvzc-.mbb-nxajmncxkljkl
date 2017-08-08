@@ -22,7 +22,7 @@ public class SavingThing {
     }
 
     public static ArrayList<String> toArrayList(String string) {
-        String[] arr = string.split("\n");
+        String[] arr = string.split("\\n");
 
         return new ArrayList<>(Arrays.asList(arr));
     }
