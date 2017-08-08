@@ -97,7 +97,7 @@ public class ViewRecipes extends AppCompatActivity {
         });
     }
 
-    public void addRecipeButton(int num) {
+    public void addRecipeButton(final int num) {
         LinearLayout layout = (LinearLayout) findViewById(R.id.recipesDisplay);
 
         final View button = getLayoutInflater().inflate(R.layout.recipe_button, layout, false);
@@ -109,7 +109,9 @@ public class ViewRecipes extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO: have a page that shows a single recipe
+                Intent intent = new Intent(getThis(), ViewRecipeDetails.class);
+                intent.setAction(Integer.toString(num));
+                startActivity(intent);
 
                 // go to that page here
             }

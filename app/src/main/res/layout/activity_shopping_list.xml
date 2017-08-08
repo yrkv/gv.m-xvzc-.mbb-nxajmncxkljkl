@@ -41,7 +41,7 @@
         android:padding="10dp"
         android:text="Add Item"
         android:textSize="20sp"
-        android:onClick="selectAddMethod"
+        android:onClick="addItem"
         />
 
     <View

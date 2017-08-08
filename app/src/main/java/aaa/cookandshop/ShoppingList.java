@@ -43,8 +43,7 @@ public class ShoppingList extends AppCompatActivity {
     public void removeItem(View v) {
         LinearLayout projectsList = (LinearLayout) findViewById(R.id.itemList);
         projectsList.removeView(v);
-        list.remove(0);
-
+        list.remove(v.getId());
     }
 
     public void selectAddMethod(View v) {
