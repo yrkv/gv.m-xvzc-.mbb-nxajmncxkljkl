@@ -22,6 +22,7 @@ public class ShoppingList extends AppCompatActivity {
 
     // TODO: find some way to save this shit
     private ArrayList<String> list = new ArrayList<>();
+    private ArrayList<View> list2 = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,9 +36,11 @@ public class ShoppingList extends AppCompatActivity {
 
     public void removeItem(View v) {
         System.out.println(v.getId());
+        System.out.println(list2.get(0).getId());
         LinearLayout projectsList = (LinearLayout) findViewById(R.id.itemList);
         projectsList.removeView(v);
         list.remove(0);
+
     }
 
     public void addItem(String text) {
@@ -58,6 +61,7 @@ public class ShoppingList extends AppCompatActivity {
 
         // add it to a list
         list.add(text);
+        list2.add(button);
 
         ((EditText)button.findViewById(R.id.itemText)).addTextChangedListener(new TextWatcher() {
             @Override
