@@ -19,7 +19,7 @@ public class ViewRecipes extends AppCompatActivity {
 
     private static final int RECIPE_COUNT = 3;
 
-    private String[][] recipes = new String[3][];
+    private String[][] recipes = new String[RECIPE_COUNT][];
     private ArrayList<String> categoryButtons = new ArrayList<>();
 
     @Override

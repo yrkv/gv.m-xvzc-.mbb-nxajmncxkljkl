@@ -8,12 +8,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.ArraySet;
+import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -43,10 +48,26 @@ public class ShoppingList extends AppCompatActivity {
     }
 
     public void selectAddMethod(View v) {
-        System.out.println("ijawjiawod");
-        RelativeLayout shoppingScreen = (RelativeLayout) findViewById(R.id.shoppingScreen);
-        final View Popup = getLayoutInflater().inflate(R.layout.add_item_popup, shoppingScreen, false);
-        shoppingScreen.addView(Popup);
+        final View window = getLayoutInflater().inflate(R.layout.add_item_popup, (ViewGroup) findViewById(R.id.popupWindow), false);
+
+        int px = (int) TypedValue.applyDimension(
+                TypedValue.COMPLEX_UNIT_DIP,
+                250,
+                getResources().getDisplayMetrics()
+        );
+
+        PopupWindow popup = new PopupWindow(window, px, (int) (px / 1.5), true);
+
+        popup.showAtLocation(window, Gravity.CENTER, 0, 0);
+
+        Button button = (Button) window.findViewById(R.id.popupButton);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                addItem(((EditText) window.findViewById(R.id.inputItem)).getText().toString());
+            }
+        });
     }
 
     public void addItem(String text) {
