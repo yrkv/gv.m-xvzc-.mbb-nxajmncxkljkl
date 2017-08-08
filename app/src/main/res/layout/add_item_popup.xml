@@ -5,8 +5,8 @@
     android:background="#ffffff"
     android:orientation="vertical">
 
-    <EditText
+    <!--<EditText
         android:layout_width="match_parent"
-        android:layout_height="" />
+        android:layout_height="" />-->
 
 </RelativeLayout>

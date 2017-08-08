@@ -20,7 +20,6 @@
             android:name=".ShoppingList"
             android:theme="@style/AppTheme2"
             android:windowSoftInputMode="adjustPan|adjustResize" />
-        <activity android:name=".Recipes" />
         <activity android:name=".ViewRecipes"
             android:theme="@style/AppTheme2"
             android:windowSoftInputMode="adjustPan|adjustResize" />

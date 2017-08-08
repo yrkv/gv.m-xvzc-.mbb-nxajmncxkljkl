@@ -39,7 +39,7 @@ public class ViewRecipes extends AppCompatActivity {
 
 
         for (int i = 0; i < RECIPE_COUNT; i++) {
-            String[] tags = ("Recipes."+recipes[i][1]).split("\\.");
+            String[] tags = recipes[i][1].split("\\.");
 
             for (int j = 0; j < tags.length; j++) {
                 if (j < currentDir.length) {

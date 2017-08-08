@@ -22,9 +22,8 @@ public class Home extends AppCompatActivity {
 
     public void goToRecipes(View view) {
 
-        Intent intent2 = new Intent(this, Recipes.class);
-
-
-        startActivity(intent2);
+        Intent intent = new Intent(this, ViewRecipes.class);
+        intent.setAction("Recipes");
+        startActivity(intent);
     }
 }
