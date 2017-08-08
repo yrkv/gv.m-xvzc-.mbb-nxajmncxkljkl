@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="aaa.cookandshop.ShoppingList"
-    android:background="@drawable/shoppingcart">
+    android:background="@drawable/shoppingcart"
+    android:id="@+id/shoppingScreen">
 
     <TextView
         android:id="@+id/textView1"

@@ -14,6 +14,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -35,8 +36,6 @@ public class ShoppingList extends AppCompatActivity {
     }
 
     public void removeItem(View v) {
-        System.out.println(v.getId());
-        System.out.println(list2.get(0).getId());
         LinearLayout projectsList = (LinearLayout) findViewById(R.id.itemList);
         projectsList.removeView(v);
         list.remove(0);
@@ -44,7 +43,10 @@ public class ShoppingList extends AppCompatActivity {
     }
 
     public void selectAddMethod(View v) {
-
+        System.out.println("ijawjiawod");
+        RelativeLayout shoppingScreen = (RelativeLayout) findViewById(R.id.shoppingScreen);
+        final View Popup = getLayoutInflater().inflate(R.layout.add_item_popup, shoppingScreen, false);
+        shoppingScreen.addView(Popup);
     }
 
     public void addItem(String text) {
@@ -57,7 +59,6 @@ public class ShoppingList extends AppCompatActivity {
         // set the text
         ((EditText)button.findViewById(R.id.itemText)).setText(text);
 
-        System.out.println(list.size());
         button.setId(list.size());
 
         // add it to the Layout

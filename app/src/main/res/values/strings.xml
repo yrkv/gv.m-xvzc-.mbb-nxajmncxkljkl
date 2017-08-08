@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Cook\'N\'Shop</string>
+    <string name="add_item_hint">Custom Item Name</string>
+    <string name="add_item_or">OR</string>
+    <string name="add_item_from_favorites">Add item from favorites</string>
     <!--
         0: name
         1: category.subcategory1.subcategoryN

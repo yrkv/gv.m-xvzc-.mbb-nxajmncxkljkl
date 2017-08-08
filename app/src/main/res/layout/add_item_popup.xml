@@ -1,12 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="300dp"
-    android:layout_height="300dp"
-    android:background="#ffffff"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
     android:orientation="vertical">
 
-    <!--<EditText-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="" />-->
+    <RelativeLayout
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="100dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="#f5f5f5"
 
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:hint="@string/add_item_hint"
+            android:layout_marginTop="120dp"
+            android:paddingLeft="10dp"
+            android:paddingEnd="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="170dp"
+            android:text="@string/add_item_or"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/textView" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="200dp"
+            android:text="@string/add_item_from_favorites"
+            android:background="#dddddd"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
 </RelativeLayout>
