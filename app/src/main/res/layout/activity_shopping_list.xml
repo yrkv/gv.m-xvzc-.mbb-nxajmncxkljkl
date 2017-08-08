@@ -40,7 +40,7 @@
         android:padding="10dp"
         android:text="Add Item"
         android:textSize="20sp"
-        android:onClick="addItem"
+        android:onClick="selectAddMethod"
         />
 
     <View

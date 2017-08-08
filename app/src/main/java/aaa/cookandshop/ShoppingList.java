@@ -43,6 +43,10 @@ public class ShoppingList extends AppCompatActivity {
 
     }
 
+    public void selectAddMethod(View v) {
+
+    }
+
     public void addItem(String text) {
         // get the LinearLayout
         LinearLayout projectsList = (LinearLayout) findViewById(R.id.itemList);
