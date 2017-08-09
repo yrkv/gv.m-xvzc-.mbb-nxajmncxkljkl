@@ -23,7 +23,7 @@ public class Home extends AppCompatActivity {
     public void goToRecipes(View view) {
 
         Intent intent = new Intent(this, ViewRecipes.class);
-        intent.setAction("Recipes");
+        intent.setAction(getString(R.string.recipes));
         startActivity(intent);
     }
 }

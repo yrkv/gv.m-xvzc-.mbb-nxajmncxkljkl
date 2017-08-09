@@ -6,6 +6,7 @@
     <string name="ingredients">Ингредиенты</string>
     <string name="details">Детали</string>
     <string name="serves">Кормит</string>
+    <string name="recipes">Рецепты</string>
     <!--
         0: name
         1: category.subcategory1.subcategoryN
