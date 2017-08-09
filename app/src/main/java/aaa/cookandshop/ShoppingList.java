@@ -74,6 +74,7 @@ public class ShoppingList extends AppCompatActivity {
         projectsList.removeView(v);
         int id = v.getId();
         //Adds the string to the "add back" timeline
+        addToRemovedList(list.get(id));
         reverseChronological.add(0,list.get(id));
         //TODO: MAY CAUSE ERROR IN THE FUTURE IF MORE THAN ONE THING CAN BE REMOVED AT ONCE (e.g. clear list button?)
         if(reverseChronological.size() > 50) {
@@ -133,31 +134,31 @@ public class ShoppingList extends AppCompatActivity {
         // add it to a list
         list.add(text);
         list2.add(button);
+    }
 
-        ((TextView)button.findViewById(R.id.itemText)).addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+    public void addToRemovedList(String text) {
+        // get the LinearLayout
+        LinearLayout removedList = (LinearLayout) findViewById(R.id.removedList);
 
-            }
+        // make a copy of the button
+        final View button = getLayoutInflater().inflate(R.layout.shopping_list_deleted, removedList, false);
 
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
+        // set the text
+        ((TextView)button.findViewById(R.id.itemText)).setText(text);
 
-            }
+        // add it to the Layout
+        removedList.addView(button);
+    }
 
-            @Override
-            public void afterTextChanged(Editable s) {
-                list.set(button.getId(), s.toString());
-            }
-        });
+    public void addBack(View v) {
+        LinearLayout removedList = (LinearLayout) findViewById(R.id.removedList);
+        View parent = (View) v.getParent();
+        removedList.removeView(parent);
 
-//        ((CheckBox)button.findViewById(R.id.checkBox))
-//                .setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView,boolean isChecked) {
-//                removeItem();
-//                what happens when checkbox is checked.
-//            }
-//        });
+        String text = ((TextView) parent.findViewById(R.id.itemText)).getText().toString();
+
+        reverseChronological.remove(text);
+
+        addItem(text);
     }
 }
