@@ -1,10 +1,11 @@
 <resources>
-    <string name="app_name">Cook\'N\'Shop</string>
-    <string name="add_item_hint">Custom Item Name</string>
-    <string name="add_item_or">OR</string>
-    <string name="add_item">Add</string>
+    <string name="app_name">Готовка\'И\'Покупка</string>
+    <string name="add_item_hint">Имя продукта</string>
+    <string name="add_item">Добавить</string>
     <string name="listData">com.cookandshop.listData</string>
-    <string name="recipes">Рецепты</string>
+    <string name="ingredients">Ингредиенты</string>
+    <string name="details">Детали</string>
+    <string name="serves">Кормит</string>
     <!--
         0: name
         1: category.subcategory1.subcategoryN
@@ -20,13 +21,13 @@
         <item>Маршмелловое печенье</item>
         <item>Рецепты.Десерты.Печенье</item>
         <item>24</item>
-        <item>Приготовьте брауни микс как написано на упаковке. Засуньте в духовку в противени размера 9x13 с температурой 350 градусов Фаренгейта на 28-30 мин. Покройте с маршмеллоу и дайте печенье печь дополнительные 3 мин. (Это чтобы маршмеллоу растаяли чуть-чуть).    ГЛАЗУРЬ: Смешайте шоколадные чипсы, арахисовое масло, и обычное масло в кастрюле и варите пока не растает. Снимите с печки и добавьте хлопья. Разложите по маршмеллоу. Cool 2 hours.	</item>
-        <item>1,pkg fudge brownie mix</item>
-        <item>1,pkg miniature marshmallows (10 1/2 oz)</item>
-        <item>2,cups semi-sweet chocolate chips (12 oz)</item>
-        <item>1,cup peanut butter</item>
-        <item>1,Tbsp butter or margarine</item>
-        <item>1.5,cups crisp rice cereal</item>
+        <item>Приготовьте брауни микс как написано на упаковке. Засуньте в духовку в противени размера 9x13 с температурой 350 градусов Фаренгейта на 28-30 мин. Покройте с маршмеллоу и дайте печенье печь дополнительные 3 мин. (Это чтобы маршмеллоу растаяли чуть-чуть).    ГЛАЗУРЬ: Смешайте шоколадные чипсы, арахисовое масло, и обычное масло в кастрюле и варите пока не растает. Снимите с печки и добавьте хлопья. Разложите по маршмеллоу. Поставьте остынуть 2 часа.	</item>
+        <item>1,упаковка брауни микса</item>
+        <item>1,упаковка мини маршмеллоу (10 1/2 oz)</item>
+        <item>2,чашки полусладких шоколадных чипсов (12 oz)</item>
+        <item>1,чашку арахисовое масло</item>
+        <item>1,столовую ложку масла или маргарина</item>
+        <item>1.5,чашек хрустящих рисовых хлопьев</item>
     </string-array>
     <string-array name="recipe1">
         <item>Золотой торт</item>
@@ -40,8 +41,8 @@
         <item>0.75,cup hot water</item>
     </string-array>
     <string-array name="recipe2">
-        <item>Miracle Lasagna</item>
-        <item>Recipes.Main Dishes</item>
+        <item>Чудо лазаньяa</item>
+        <item>Рецепты.Главные блюда</item>
         <item>6</item>
         <item>1. In 2 qt. baking dish (11x7) spread 1 cup sauce. Top with 3 dry noodles, ricotta cheese, 1 cup mozzarella cheese, Parmesan cheese and 1 cup sauce. Top with remaining dry noodles and sauce. Cover. 2. Bake at 375 degrees 1 hr. Top with remaining mozzarella cheese. Let stand 5 min. Serves 6.</item>
         <item>1,jar Prego Traditional Spaghetti Sauce (28 oz)</item>

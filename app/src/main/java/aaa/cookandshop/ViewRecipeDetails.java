@@ -83,6 +83,16 @@ public class ViewRecipeDetails extends AppCompatActivity {
         details.setText(detailsText);
     }
 
+    public void addRecipeToFavorites(View v) {
+        SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+        ArrayList<String> favoritedRecipes = SavingThing.toArrayList(sharedPref.getString(getString(R.string.favoriteData), ""));
+        //TODO: add the recipe LOL
+        //favoritedRecipes.add()
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putString(getString(R.string.favoriteData), SavingThing.toString(favoritedRecipes));
+        editor.apply();
+    }
+
     public void addRecipeToShoppingList(View v) {
         String[] ingredients = ingredientsText.split("\\n\\n");
         for(String item : ingredients) {
