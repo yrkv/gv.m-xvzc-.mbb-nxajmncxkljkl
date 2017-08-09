@@ -55,7 +55,7 @@ public class ShoppingList extends AppCompatActivity {
         SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
         String data = sharedPref.getString(getString(R.string.listData), "");
 
-        if (data.equals("")) {
+        if (!data.equals("")) {
             ArrayList<String> newList = SavingThing.toArrayList(data);
 
             for (String text : newList) {
@@ -71,12 +71,14 @@ public class ShoppingList extends AppCompatActivity {
     public void removeItem(View v) {
         LinearLayout projectsList = (LinearLayout) findViewById(R.id.itemList);
         projectsList.removeView(v);
-        list.remove(v.getId());
+        int id = v.getId();
+        list.remove(id);
+        list2.remove(id);
 
-        for(int i = v.getId(); i < list2.size(); i++) {
-            System.out.println(list2.get(i).getId());
-            list2.get(i).setId(i);
-            System.out.println(list2.get(i).getId());
+        for(id = v.getId(); id < list2.size(); id++) {
+            System.out.println(list2.get(id).getId());
+            list2.get(id).setId(id);
+            System.out.println(list2.get(id).getId());
         }
     }
 
