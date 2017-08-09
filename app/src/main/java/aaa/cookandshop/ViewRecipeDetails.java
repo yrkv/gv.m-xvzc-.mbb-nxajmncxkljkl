@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
@@ -89,7 +90,7 @@ public class ViewRecipeDetails extends AppCompatActivity {
     }
 
     public void addItem(String item) {
-        SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         ArrayList<String> shoppingList = SavingThing.toArrayList(sharedPref.getString(getString(R.string.listData), ""));
         shoppingList.add(item);
         SharedPreferences.Editor editor = sharedPref.edit();

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -45,7 +46,7 @@ public class ShoppingList extends AppCompatActivity {
     }
 
     private void save() {
-        SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = sharedPref.edit();
 
         editor.putString(getString(R.string.listData), SavingThing.toString(list));
@@ -53,13 +54,15 @@ public class ShoppingList extends AppCompatActivity {
     }
 
     private void load() {
-        SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+        System.out.println(sharedPref.getString(getString(R.string.listData), ""));
         String data = sharedPref.getString(getString(R.string.listData), "");
 
         if (!data.equals("")) {
             ArrayList<String> newList = SavingThing.toArrayList(data);
 
             for (String text : newList) {
+                System.out.println(text);
                 addItem(text);
             }
         }
