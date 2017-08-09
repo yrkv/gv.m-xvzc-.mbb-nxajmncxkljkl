@@ -115,6 +115,7 @@
         android:layout_marginBottom="15dp"
         android:layout_alignLeft="@id/someThing"
         android:layout_alignParentBottom="true"
+        android:onClick="addRecipeToShoppingList"
         />
 
 

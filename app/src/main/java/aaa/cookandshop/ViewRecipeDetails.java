@@ -1,5 +1,7 @@
 package aaa.cookandshop;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +10,8 @@ import android.view.View;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 /**
  * Created by Kaleb on 8/8/2017.
@@ -18,6 +22,7 @@ public class ViewRecipeDetails extends AppCompatActivity {
 
     private static final boolean LEFT = false;
     private static final boolean RIGHT = true;
+    private String ingredientsText = "";
 
     private boolean side = LEFT;
 
@@ -60,7 +65,7 @@ public class ViewRecipeDetails extends AppCompatActivity {
 
         serves.setText(getString(R.string.serves) + " " + recipe[2]);
 
-        String ingredientsText = "";
+        ingredientsText = "";
         for (int i = 4; i < recipe.length; i++) {
             String[] split = recipe[i].split(",");
             ingredientsText += split[1] + " - " + split[0] + "\n\n";
@@ -74,6 +79,26 @@ public class ViewRecipeDetails extends AppCompatActivity {
         detailsText += recipe[1] + "\n\n" + recipe[3];
 
         details.setText(detailsText);
+    }
+
+    public void addRecipeToShoppingList(View v) {
+        System.out.println(ingredientsText);
+        String[] ingredients = ingredientsText.split("\\n\\n");
+        for(String item : ingredients) {
+            System.out.println(item);
+            addItem(item);
+        }
+    }
+
+    public void addItem(String item) {
+        System.out.println("in");
+        SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+        ArrayList<String> shoppingList = SavingThing.toArrayList(sharedPref.getString(getString(R.string.listData), ""));
+        System.out.println(item);
+        shoppingList.add(item);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        System.out.println(SavingThing.toString(shoppingList));
+        editor.putString(getString(R.string.listData), SavingThing.toString(shoppingList));
     }
 
     public void scrollRight(View v) {
