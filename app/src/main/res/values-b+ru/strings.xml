@@ -4,6 +4,7 @@
     <string name="add_item_or">OR</string>
     <string name="add_item">Add</string>
     <string name="listData">com.cookandshop.listData</string>
+    <string name="recipes">Рецепты</string>
     <!--
         0: name
         1: category.subcategory1.subcategoryN

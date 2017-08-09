@@ -7,6 +7,7 @@
     <string name="ingredients">Ingredients</string>
     <string name="details">Details</string>
     <string name="serves">Serves</string>
+    <string name="recipes">Recipes</string>
     <!--
         0: name
         1: category.subcategory1.subcategoryN

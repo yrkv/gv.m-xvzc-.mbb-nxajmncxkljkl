@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -87,6 +88,8 @@ public class ViewRecipeDetails extends AppCompatActivity {
         for(String item : ingredients) {
             addItem(item);
         }
+
+        Toast.makeText(this, "Recipe Added", Toast.LENGTH_SHORT).show();
     }
 
     public void addItem(String item) {
