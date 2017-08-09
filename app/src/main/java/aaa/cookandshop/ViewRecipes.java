@@ -9,6 +9,7 @@ import android.transition.Transition;
 import android.transition.TransitionValues;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
@@ -32,7 +33,7 @@ public class ViewRecipes extends AppCompatActivity {
 
         ((TextView) findViewById(R.id.recipesDirectory)).setText(action);
 
-        String[] currentDir = action.split("/");
+        String[] currentDir = action.split(">");
 
         Resources r = getResources();
 
@@ -91,7 +92,7 @@ public class ViewRecipes extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getThis(), ViewRecipes.class);
-                intent.setAction(dir + "/" + text);
+                intent.setAction(dir + ">" + text);
                 startActivity(intent);
             }
         });

@@ -1,15 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:paddingRight="25dp"
-    android:paddingLeft="25dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="aaa.cookandshop.ViewRecipeDetails"
     android:background="@drawable/recipe_details">
 
+    <TextView
+        android:id="@+id/recipeName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:textColor="#ffffff"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:background="@color/orange"
+        />
+
+    <TextView
+        android:id="@+id/details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/recipeName"
+        android:layout_alignParentLeft="true"
+        android:text="Details"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:background="#aaffffff"
+        android:onClick="scrollLeft"
+        />
+
+    <TextView
+        android:id="@+id/instructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/recipeName"
+        android:layout_alignParentRight="true"
+        android:text="Instructions"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        android:background="#44000000"
+        android:onClick="scrollRight"
+        />
+
+    <HorizontalScrollView
+        android:id="@+id/someThing"
+        android:padding="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/details"
+        android:layout_alignLeft="@id/details"
+        android:layout_alignRight="@id/instructions"
+        android:layout_above="@+id/addToList"
+        android:background="#aaffffff"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/detailsText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/instructionsText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
 
 
-</LinearLayout>
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+
+    <TextView
+        android:id="@+id/addToList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:background="#aa000000"
+        android:text="Add to\nShopping List"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        android:layout_alignLeft="@id/someThing"
+        android:layout_alignParentBottom="true"
+        />
+
+
+    <TextView
+        android:id="@+id/favoriteRecipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:background="#aa000000"
+        android:text="Favorite\nthis Recipe"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        android:layout_alignRight="@id/someThing"
+        android:layout_alignParentBottom="true"
+        />
+
+
+
+</RelativeLayout>
