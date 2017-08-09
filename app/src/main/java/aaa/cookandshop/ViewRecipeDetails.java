@@ -62,7 +62,8 @@ public class ViewRecipeDetails extends AppCompatActivity {
 
         String ingredientsText = "";
         for (int i = 4; i < recipe.length; i++) {
-            ingredientsText += recipe[i] + "\n\n";
+            String[] split = recipe[i].split(",");
+            ingredientsText += split[1] + " - " + split[0] + "\n\n";
         }
 
         ingredients.setText(ingredientsText);
