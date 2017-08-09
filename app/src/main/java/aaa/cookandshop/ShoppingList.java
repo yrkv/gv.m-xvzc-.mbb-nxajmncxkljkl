@@ -65,13 +65,19 @@ public class ShoppingList extends AppCompatActivity {
     }
 
     public void addItem(View v) {
-        addItem("");
+        addItem(((EditText) findViewById(R.id.inputItem)).getText().toString());
     }
 
     public void removeItem(View v) {
         LinearLayout projectsList = (LinearLayout) findViewById(R.id.itemList);
         projectsList.removeView(v);
         list.remove(v.getId());
+
+        for(int i = v.getId(); i < list2.size(); i++) {
+            System.out.println(list2.get(i).getId());
+            list2.get(i).setId(i);
+            System.out.println(list2.get(i).getId());
+        }
     }
 
     public void selectAddMethod(View v) {
@@ -83,7 +89,7 @@ public class ShoppingList extends AppCompatActivity {
                 getResources().getDisplayMetrics()
         );
 
-        PopupWindow popup = new PopupWindow(window, px, (int) (px / 1.5), true);
+        final PopupWindow popup = new PopupWindow(window, px, (int) (px / 1.5), true);
 
         popup.showAtLocation(window, Gravity.CENTER, 0, 0);
 
@@ -93,6 +99,7 @@ public class ShoppingList extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 addItem(((EditText) window.findViewById(R.id.inputItem)).getText().toString());
+                popup.dismiss();
             }
         });
     }
@@ -105,7 +112,7 @@ public class ShoppingList extends AppCompatActivity {
         final View button = getLayoutInflater().inflate(R.layout.shopping_list_item, projectsList, false);
 
         // set the text
-        ((EditText)button.findViewById(R.id.itemText)).setText(text);
+        ((TextView)button.findViewById(R.id.itemText)).setText(text);
 
         button.setId(list.size());
 
@@ -116,7 +123,7 @@ public class ShoppingList extends AppCompatActivity {
         list.add(text);
         list2.add(button);
 
-        ((EditText)button.findViewById(R.id.itemText)).addTextChangedListener(new TextWatcher() {
+        ((TextView)button.findViewById(R.id.itemText)).addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 

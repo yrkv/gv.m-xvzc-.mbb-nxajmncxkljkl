@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="aaa.cookandshop.ShoppingList"
-    android:background="@drawable/shopping_cart"
+    android:background="@drawable/paper"
     android:id="@+id/shoppingScreen">
 
     <TextView
@@ -41,7 +41,7 @@
         android:padding="10dp"
         android:text="Add Item"
         android:textSize="20sp"
-        android:onClick="addItem"
+        android:onClick="selectAddMethod"
         />
 
     <View
