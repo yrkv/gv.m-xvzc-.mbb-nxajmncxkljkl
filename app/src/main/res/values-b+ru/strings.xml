@@ -7,6 +7,20 @@
     <string name="details">Детали</string>
     <string name="serves">Кормит</string>
     <string name="recipes">Рецепты</string>
+
+
+
+    <string name="favoriteData">com.cookandshop.favoriteData</string>
+
+    <string name="add_nback">Добавить\nОбратно</string>
+
+    <string name="my_shopping_list">Мой Список Для Покупок</string>
+    <string name="recipes_button">Рецепты</string>
+    <string name="title">Cook\'N\'Shop</string>
+    <string name="your_shopping_list">Ваш Список Для Покупок</string>
+    <string name="add_item2">Добавить Продукт</string>
+    <string name="add_to_nshopping_list">Добавить в\nСписок Для Покупок</string>
+    <string name="favorite_nthis_recipe">Сохранить\nЭтот Рецепт</string>
     <!--
         0: name
         1: category.subcategory1.subcategoryN

@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/orange"
-        android:text="Your Shopping List"
+        android:text="@string/your_shopping_list"
         android:textColor="#FFFFFF"
         android:textSize="28sp"
         android:textStyle="bold"
@@ -39,7 +39,7 @@
         android:background="#808080"
         android:textColor="#FFFFFF"
         android:padding="10dp"
-        android:text="Add Item"
+        android:text="@string/add_item2"
         android:textSize="20sp"
         android:onClick="selectAddMethod"
         />

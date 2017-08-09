@@ -22,11 +22,11 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="38dp"
-        android:text="Cook'N'Shop"
+        android:text="@string/title"
         android:textColor="#000000"
         android:textSize="40dp"
         android:textAlignment="center"
-        tools:text="Cook'N'Shop" />
+        tools:text="@string/title" />
 
     <View
         android:layout_width="wrap_content"

@@ -11,6 +11,11 @@
     <string name="recipes">Recipes</string>
     <string name="my_shopping_list">My Shopping List</string>
     <string name="recipes_button">Recipes</string>
+    <string name="title">Cook\'N\'Shop</string>
+    <string name="your_shopping_list">Your Shopping List</string>
+    <string name="add_item2">Add Item</string>
+    <string name="add_to_nshopping_list">Add to Shopping List</string>
+    <string name="favorite_nthis_recipe">Favorite this Recipe</string>
     <!--
         0: name
         1: category.subcategory1.subcategoryN
