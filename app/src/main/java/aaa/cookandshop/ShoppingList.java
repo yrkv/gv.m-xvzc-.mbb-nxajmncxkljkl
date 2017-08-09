@@ -29,6 +29,7 @@ public class ShoppingList extends AppCompatActivity {
     // TODO: find some way to save this shit
     private ArrayList<String> list = new ArrayList<>();
     private ArrayList<View> list2 = new ArrayList<>();
+    private ArrayList<String> reverseChronological = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,7 +73,15 @@ public class ShoppingList extends AppCompatActivity {
         LinearLayout projectsList = (LinearLayout) findViewById(R.id.itemList);
         projectsList.removeView(v);
         int id = v.getId();
+        //Adds the string to the "add back" timeline
+        reverseChronological.add(0,list.get(id));
+        //TODO: MAY CAUSE ERROR IN THE FUTURE IF MORE THAN ONE THING CAN BE REMOVED AT ONCE (e.g. clear list button?)
+        if(reverseChronological.size() > 50) {
+            reverseChronological.remove(51);
+        }
+        //removes the string from the string list
         list.remove(id);
+        //removes the button/View from the button list
         list2.remove(id);
 
         for(id = v.getId(); id < list2.size(); id++) {
