@@ -82,23 +82,19 @@ public class ViewRecipeDetails extends AppCompatActivity {
     }
 
     public void addRecipeToShoppingList(View v) {
-        System.out.println(ingredientsText);
         String[] ingredients = ingredientsText.split("\\n\\n");
         for(String item : ingredients) {
-            System.out.println(item);
             addItem(item);
         }
     }
 
     public void addItem(String item) {
-        System.out.println("in");
         SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
         ArrayList<String> shoppingList = SavingThing.toArrayList(sharedPref.getString(getString(R.string.listData), ""));
-        System.out.println(item);
         shoppingList.add(item);
         SharedPreferences.Editor editor = sharedPref.edit();
-        System.out.println(SavingThing.toString(shoppingList));
         editor.putString(getString(R.string.listData), SavingThing.toString(shoppingList));
+        editor.apply();
     }
 
     public void scrollRight(View v) {
