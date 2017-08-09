@@ -3,9 +3,11 @@
     <string name="add_item_hint">Custom Item Name</string>
     <string name="add_item">Add</string>
     <string name="listData">com.cookandshop.listData</string>
+    <string name="favoriteData">com.cookandshop.favoriteData</string>
     <string name="ingredients">Ingredients</string>
     <string name="details">Details</string>
     <string name="serves">Serves</string>
+    <string name="add_nback">Add Back</string>
     <!--
         0: name
         1: category.subcategory1.subcategoryN
