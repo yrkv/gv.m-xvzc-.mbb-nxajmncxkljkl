@@ -7,8 +7,10 @@
     <string name="ingredients">Ingredients</string>
     <string name="details">Details</string>
     <string name="serves">Serves</string>
-    <string name="add_nback">Add Back</string>
+    <string name="add_nback">Add\nBack</string>
     <string name="recipes">Recipes</string>
+    <string name="my_shopping_list">My Shopping List</string>
+    <string name="recipes_button">Recipes</string>
     <!--
         0: name
         1: category.subcategory1.subcategoryN

@@ -17,34 +17,72 @@
 
     <TextView
         android:id="@+id/title"
-        android:layout_width="300dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="38dp"
         android:text="Cook'N'Shop"
+        android:textColor="#000000"
         android:textSize="40dp"
         android:textAlignment="center"
         tools:text="Cook'N'Shop" />
 
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="3dp"
+        android:background="@color/orange"
+        android:layout_alignLeft="@id/title"
+        android:layout_alignRight="@id/title"
+        android:layout_alignBottom="@id/title"
+        />
+
+
+
     <Button
         android:id="@+id/shoppingList"
+        android:background="#b0404040"
+        android:padding="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/title"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="49dp"
-        android:text="My Shopping List"
+        android:layout_marginTop="50dp"
+        android:textColor="#ffffff"
+        android:text="@string/my_shopping_list"
         android:onClick="goToShoppingList"/>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="3dp"
+        android:background="@color/orange"
+        android:layout_alignLeft="@id/shoppingList"
+        android:layout_alignRight="@id/shoppingList"
+        android:layout_below="@id/shoppingList"
+        />
 
     <Button
         android:id="@+id/recipes"
+        android:padding="10dp"
+        android:textColor="#ffffff"
+        android:background="#b0404040"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/shoppingList"
         android:layout_centerHorizontal="true"
+        android:layout_alignLeft="@id/shoppingList"
+        android:layout_alignRight="@id/shoppingList"
         android:layout_marginTop="20dp"
-        android:text="Recipes"
+        android:text="@string/recipes_button"
         android:onClick="goToRecipes"/>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="3dp"
+        android:background="@color/orange"
+        android:layout_alignLeft="@id/recipes"
+        android:layout_alignRight="@id/recipes"
+        android:layout_below="@id/recipes"
+        />
 
 </RelativeLayout>
