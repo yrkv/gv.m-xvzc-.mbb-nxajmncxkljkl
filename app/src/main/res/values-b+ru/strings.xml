@@ -19,7 +19,7 @@
         Ingredients are sectioned as amt,item
     -->
     <string-array name="recipe0">
-        <item>Маршмелловое печенье</item>
+        <item>Маршмелловое Печенье</item>
         <item>Рецепты.Десерты.Печенье</item>
         <item>24</item>
         <item>Приготовьте брауни микс как написано на упаковке. Засуньте в духовку в противени размера 9x13 с температурой 350 градусов Фаренгейта на 28-30 мин. Покройте с маршмеллоу и дайте печенье печь дополнительные 3 мин. (Это чтобы маршмеллоу растаяли чуть-чуть).    ГЛАЗУРЬ: Смешайте шоколадные чипсы, арахисовое масло, и обычное масло в кастрюле и варите пока не растает. Снимите с печки и добавьте хлопья. Разложите по маршмеллоу. Поставьте остынуть 2 часа.	</item>
@@ -31,7 +31,7 @@
         <item>1.5,чашек хрустящих рисовых хлопьев</item>
     </string-array>
     <string-array name="recipe1">
-        <item>Золотой торт</item>
+        <item>Золотой Торт</item>
         <item>Рецепты.Десерты.Торты</item>
         <item>24</item>
         <item>Beat egg yolks, salt and water until thick. Fold in sugar, 1 tsp vanilla and lemon extract. Fold in flour. Shake 2 tsp baking powder over dough and beat in.</item>
@@ -42,7 +42,7 @@
         <item>0.75,cup hot water</item>
     </string-array>
     <string-array name="recipe2">
-        <item>Чудо лазаньяa</item>
+        <item>Чудо Лазаньяa</item>
         <item>Рецепты.Главные блюда</item>
         <item>6</item>
         <item>1. In 2 qt. baking dish (11x7) spread 1 cup sauce. Top with 3 dry noodles, ricotta cheese, 1 cup mozzarella cheese, Parmesan cheese and 1 cup sauce. Top with remaining dry noodles and sauce. Cover. 2. Bake at 375 degrees 1 hr. Top with remaining mozzarella cheese. Let stand 5 min. Serves 6.</item>

@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class ViewRecipes extends AppCompatActivity {
 
-    private static final int RECIPE_COUNT = 3;
+    private static final int RECIPE_COUNT = 18;
 
     private String[][] recipes = new String[RECIPE_COUNT][];
     private ArrayList<String> categoryButtons = new ArrayList<>();
