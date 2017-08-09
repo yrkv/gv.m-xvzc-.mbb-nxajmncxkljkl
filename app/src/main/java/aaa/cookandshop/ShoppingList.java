@@ -81,7 +81,7 @@ public class ShoppingList extends AppCompatActivity {
         reverseChronological.add(0,list.get(id));
         //TODO: MAY CAUSE ERROR IN THE FUTURE IF MORE THAN ONE THING CAN BE REMOVED AT ONCE (e.g. clear list button?)
         if(reverseChronological.size() > 50) {
-            reverseChronological.remove(51);
+            reverseChronological.remove(50);
         }
         //removes the string from the string list
         list.remove(id);
