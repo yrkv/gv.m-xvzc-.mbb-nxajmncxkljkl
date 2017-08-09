@@ -1,13 +1,10 @@
 package aaa.cookandshop;
 
 import android.content.res.Resources;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -46,27 +43,36 @@ public class ViewRecipeDetails extends AppCompatActivity {
                 );
 
                 findViewById(R.id.detailsText).setLayoutParams(p);
-                findViewById(R.id.instructionsText).setLayoutParams(p);
-
-
+                findViewById(R.id.ingredientsText).setLayoutParams(p);
             }
         });
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            scrollView.setOnScrollChangeListener(new View.OnScrollChangeListener() {
-                @Override
-                public void onScrollChange(View v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
-                    int diffX = scrollX - oldScrollX;
-                    if (diffX < 0 && side == RIGHT) {
-                        scrollLeft(v);
-                    } else if (diffX > 0 && side == LEFT) {
-                        scrollRight(v);
-                    }
-                }
-            });
+        scrollView.setOnTouchListener(new View.OnTouchListener(){
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return true;
+            }
+        });
+
+        TextView details = (TextView) findViewById(R.id.detailsText);
+        TextView ingredients = (TextView) findViewById(R.id.ingredientsText);
+        TextView serves = (TextView) findViewById(R.id.servesX);
+
+        serves.setText(getString(R.string.serves) + " " + recipe[2]);
+
+        String ingredientsText = "";
+        for (int i = 4; i < recipe.length; i++) {
+            ingredientsText += recipe[i] + "\n\n";
         }
 
+        ingredients.setText(ingredientsText);
 
+
+        String detailsText = "";
+
+        detailsText += recipe[1] + "\n\n" + recipe[3];
+
+        details.setText(detailsText);
     }
 
     public void scrollRight(View v) {
@@ -75,10 +81,10 @@ public class ViewRecipeDetails extends AppCompatActivity {
         scrollView.smoothScrollTo(scrollView.getWidth(), 0);
 
         TextView details = (TextView) findViewById(R.id.details);
-        TextView instructions = (TextView) findViewById(R.id.instructions);
+        TextView ingredients = (TextView) findViewById(R.id.ingredients);
 
-        instructions.setBackgroundColor(0xaaffffff);
-        instructions.setTextColor(0xff000000);
+        ingredients.setBackgroundColor(0xaaffffff);
+        ingredients.setTextColor(0xff000000);
 
         details.setBackgroundColor(0x44000000);
         details.setTextColor(0xffffffff);
@@ -90,12 +96,12 @@ public class ViewRecipeDetails extends AppCompatActivity {
         scrollView.smoothScrollTo(0, 0);
 
         TextView details = (TextView) findViewById(R.id.details);
-        TextView instructions = (TextView) findViewById(R.id.instructions);
+        TextView ingredients = (TextView) findViewById(R.id.ingredients);
 
         details.setBackgroundColor(0xaaffffff);
         details.setTextColor(0xff000000);
 
-        instructions.setBackgroundColor(0x44000000);
-        instructions.setTextColor(0xffffffff);
+        ingredients.setBackgroundColor(0x44000000);
+        ingredients.setTextColor(0xffffffff);
     }
 }
